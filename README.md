@@ -1,5 +1,7 @@
 # Cloudflare Migration Tool (`cf-migrator`)
 
+> **DISCLAIMER:** This is an **independent, community-developed** tool. It is **not** an official Cloudflare product, nor is it endorsed, supported, maintained, or affiliated with Cloudflare, Inc. in any way. Use of this tool is entirely at your own risk. Please refer to the [full disclaimer](#disclaimer) below before use.
+
 A Python CLI utility to **export** Cloudflare zone configurations from one account and **import** them into another. Supports DNS records, WAF rules, Page Rules, Transform/Redirect/Origin Rules, Load Balancers, and Cache settings — with comprehensive logging, auditing, and a dry-run preview mode.
 
 ---
@@ -292,6 +294,25 @@ cf-migrator audit audit/audit_20260302_150000.json
 - **Never commit `.env`** — it is listed in `.gitignore`.
 - Use **scoped API tokens** with the minimum required permissions.
 - Export files may contain sensitive data (e.g., origin IPs). Store and transfer them securely.
+
+---
+
+## Disclaimer
+
+This software is an **independent, unofficial, community-developed** utility. It is provided on an **"as-is" basis without any warranties or guarantees** of any kind, whether express or implied.
+
+**This project is not affiliated with, endorsed by, sponsored by, or in any way officially connected to Cloudflare, Inc.** The Cloudflare name, logo, and associated trademarks are the property of Cloudflare, Inc. Their use in this project is solely for the purpose of describing the tool's functionality and does not imply any official relationship or endorsement.
+
+This tool interacts with the publicly available [Cloudflare API](https://developers.cloudflare.com/api/) and is subject to Cloudflare's API terms of use and rate limits. Users are solely responsible for:
+
+- Ensuring they have proper authorization to access and modify configurations in both source and destination Cloudflare accounts.
+- Reviewing all exported data and previewing all changes **before** committing them to a destination account.
+- Complying with Cloudflare's [Terms of Service](https://www.cloudflare.com/terms/), [Self-Serve Subscription Agreement](https://www.cloudflare.com/terms/), and any applicable Enterprise agreements.
+- Any consequences resulting from the use or misuse of this tool, including but not limited to service disruptions, data loss, or security incidents.
+
+**For official Cloudflare migration guidance and support, please contact [Cloudflare Support](https://support.cloudflare.com/) or your designated Cloudflare account team.**
+
+The authors and contributors of this project accept **no liability** for damages, losses, or service disruptions arising from its use.
 
 ---
 
